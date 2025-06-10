@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Perfecter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt Perfecter</h1>
+
+        <div class="input-group">
+            <label for="apiKey">OpenRouter API Key:</label>
+            <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+            <button id="saveApiKey">Save</button>
+        </div>
+
+        <div class="input-group">
+            <label for="originalPrompt">Your Prompt:</label>
+            <textarea id="originalPrompt" rows="6" placeholder="Enter your prompt here or select text on the page..."></textarea>
+        </div>
+
+        <button id="perfectButton">Perfect Prompt</button>
+
+        <div class="output-group">
+            <label for="perfectedPrompt">Perfected Prompt:</label>
+            <textarea id="perfectedPrompt" rows="8" readonly></textarea>
+            <button id="copyButton" class="copy-button">Copy</button>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
