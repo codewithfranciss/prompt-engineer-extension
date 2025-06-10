@@ -1,28 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "Prompt Perfecter (Deepseek R1)",
+  "name": "Perfect Text AI",
   "version": "1.0",
-  "description": "Refine and optimize your prompts using Deepseek R1 via OpenRouter.",
-  "permissions": [
-    "activeTab",
-    "contextMenus",
-    "storage",
-    "scripting"
-  ],
-  "host_permissions": [
-    "https://openrouter.ai/*"
-  ],
+  "description": "Highlight text and use DeepSeek to improve it",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Prompt Perfecter"
+    "default_title": "Perfect Text AI"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "css": ["style.css"]
     }
   ]
 }
+
+
